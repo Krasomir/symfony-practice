@@ -5,36 +5,24 @@ namespace App\Entity;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * [ORM\Entity(repositoryClass: ProductRepository::class)]
- */
+#[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
 {
-    /**
-     * [ORM\Id]
-     * [ORM\GeneratedValue]
-     * [ORM\Column(type: 'integer')]
-     */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * [ORM\Column(type: 'string', length: 100)]
-     */
+    #[ORM\Column(type: 'string', length: 100)]
     private $name;
 
-    /**
-     * [ORM\Column(type: 'decimal', precision: 8, scale: 2)]
-     */
+    #[ORM\Column(type: 'decimal', precision: 8, scale: 2)]
     private $price;
 
-    /**
-     * ORM\Column(type: 'string', length: 100, nullable: true)]
-     */
+    #[ORM\Column(type: 'string', length: 100, nullable: true)]
     private $image;
 
-    /**
-     * [ORM\Column(type: 'text', nullable: true)]
-     */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $description;
 
     public function getId(): ?int

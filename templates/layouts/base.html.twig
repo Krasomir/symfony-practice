@@ -13,11 +13,16 @@
 <body>
     <header>
         Bike Shop
+        {% if app.session.get('basket') %}
+            <a href="/basket">View basket</a>
+        {% endif %}
         <br>
     </header>
-    {% block content %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
     <footer>
-        All rights reserver &copy; copyright Bike Shop {{ year }}
+        All rights reserver &copy; copyright Bike Shop
     </footer>
 </body>
 </html>
