@@ -1,0 +1,31 @@
+$baseline: 24px;
+
+
+body {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+footer {
+    background-color: lightblue;
+    padding: $baseline;
+
+    hr {
+        display: none;
+    }
+}
+
+header {
+    background-color: lightblue;
+    font-size: 300%;
+    padding: $baseline;
+
+    hr {
+        display: none;
+    }
+}
+
+.main {
+    padding: $baseline;
+}
